@@ -1,0 +1,66 @@
+/* pages/qwcslist/qwcslist.wxss */
+.cell{
+
+ position: relative;
+ top: 0px;
+ bottom: 0px;
+ left: 0px;
+ right: 0px;
+ height: 80px;
+ margin: 5px;
+ background-color: #DDDDDD;
+}
+.left{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 5px;
+}
+.cellimage{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+.center{
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  bottom: 5px;
+}
+
+.title{
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+.desc{
+  display: block;
+  font-size: 14px;
+  color: grey;
+  height: 40px;
+  line-height: 40px;
+  width: 220px;
+  overflow: hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;  
+   
+}
+
+.right{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+}
+
+.rightimage{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}

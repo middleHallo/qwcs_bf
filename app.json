@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/qwcslist/qwcslist",
+    "pages/qwcslist/synopsis/synopsis",
+    "pages/qwcslist/synopsis/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#373346",
+    "navigationBarTitleText": "趣味测试",
+    "navigationBarTextStyle":"white"
+  }
+}

@@ -1,0 +1,17 @@
+<!--pages/qwcslist/qwcslist.wxml-->
+<view class='container'>
+  <block wx:for="{{qwcslist}}" wx:key="*this">
+        <view class="cell"  data-titleid='{{item.qwcs_title_id}}' bindtap='gotosynopsis'>
+            <view class='left'>
+                <image src='../../images/cell1.jpg' class='cellimage'></image>
+            </view>
+            <view class='center'>
+                <text class='title'>{{item.qwcs_title}}</text>
+                <text class='desc'>{{item.qwcs_title_desc}}<text>...</text></text>
+            </view>
+            <view class='right'>
+                <image src='../../images/desc.png' class='rightimage'></image>
+            </view>
+        </view>
+  </block>
+</view>

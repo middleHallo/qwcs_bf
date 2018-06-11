@@ -1,0 +1,47 @@
+<!--pages/qwcslist/synopsis/detail/detail.wxml-->
+<view>
+  <!--绑定事件处理函数bindchange-->
+  <swiper bindchange="bindChange" current='{{selectedTitle}}' style="height:{{swiperHeight + 40}}px;" >
+    <block wx:for="{{contents}}" wx:key="*this">
+      <swiper-item style="width:{{swiperWidth-20}}px;">
+        <!--设置当前问题及选项时的样式-->
+        <view class='page' style='height:{{swiperHeight}}px;' hidden='{{currentQA.question.isquestion==1?false:true}}' >
+          <view>{{index+1}}、{{currentQA.question.qwcs_question}}</view>
+            <radio-group>
+              <block wx:for="{{currentQA.anwser}}" wx:key="*this" wx:for-item="anwseritem" wx:for-index="idx">
+                <view class='anwser'>
+                  <text class='anwsertext'>{{idx+1}}、{{anwseritem.qwcs_anwser}}</text>
+                  <radio class='anwserradio' data-nextid='{{anwseritem.qwcs_next_id}}' catchtap='radiovaluechange'></radio>
+                </view>
+              </block>
+            </radio-group>
+        </view>
+        <view class='page' style='height:{{swiperHeight}}px;' hidden='{{currentQA.question.isquestion==1?true:false}}' >
+            <view class='result'>
+              <view>
+                <image mode='widthFix' src='/images/cell1.jpg' style="width:{{imgwidth}}px;"></image>
+              </view>
+              <view>
+                <open-data type="userAvatarUrl" class="useravatar"></open-data>
+                <open-data type="userNickName" class="usernickname"></open-data>
+              </view>
+              <view>
+                <text style='font-weight:bold'>测试结果：{{currentQA.result}}</text>
+              </view>
+              <view>
+                <text style='font-size:13px;'>{{currentQA.result_desc}}</text>
+              </view>
+              <view class='action'>
+                <button bindtap='share' class='actionbtn' open-type='share'>分享到群</button>
+                <button bindtap='backfirst' class='actionbtn'>返回首页</button>
+              </view>
+            </view>
+            
+        </view>
+        <view>10</view>
+        <text>10</text>
+      </swiper-item>
+    </block>
+    
+  </swiper>
+</view>

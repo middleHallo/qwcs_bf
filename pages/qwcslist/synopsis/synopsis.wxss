@@ -1,0 +1,43 @@
+/* pages/qwcslist/synopsis/synopsis.wxss */
+
+.content{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  background-color: goldenrod;
+  text-align: center;
+ 
+  border-radius: 4px;
+}
+
+.title{
+  font-size: 16px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.num{
+  font-size: 12px;
+  color: gainsboro;
+  margin-bottom: 10px;
+}
+
+.desc{
+  margin-left: 10px;
+  margin-right: 10px; 
+  font-size: 14px;
+  margin-top: 5px;
+}
+.action{
+  margin-top: 20px;
+}
+.actionbtn{
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 35px;
+  margin-bottom: 10px;
+  line-height: 35px;
+  font-size: 15px;
+}
