@@ -7,7 +7,7 @@ Page({
    */
   data: {
     qwcslist:[],
-  
+    imgurl:''
   },
 
   /**
@@ -32,9 +32,9 @@ Page({
     var url = getApp().globalData.qwcsurl + "index/getlist"
     var params = []
     var result = utils.getData(url,params,function(res){
-      
+        
         that.setData({
-          qwcslist:res.data.content
+          qwcslist:res.data.content,
         })
     })
     

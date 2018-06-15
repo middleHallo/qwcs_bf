@@ -3,7 +3,7 @@
   <block wx:for="{{qwcslist}}" wx:key="*this">
         <view class="cell"  data-titleid='{{item.qwcs_title_id}}' bindtap='gotosynopsis'>
             <view class='left'>
-                <image src='../../images/cell1.jpg' class='cellimage'></image>
+                <image src="{{item.imgurl}}" class='cellimage'></image>
             </view>
             <view class='center'>
                 <text class='title'>{{item.qwcs_title}}</text>

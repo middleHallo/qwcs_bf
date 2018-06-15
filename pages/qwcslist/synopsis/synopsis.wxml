@@ -3,7 +3,7 @@
   <view class='content' hidden='{{deschidden}}'>
       <view class='title'>{{desc.title}}</view>
       <view class='num'>{{desc.hadplay}}人在测</view>
-      <image mode='widthFix' src='/images/cell1.jpg' style="width:{{imgwidth}}px;"></image>
+      <image mode='widthFix' src='{{desc.imgurl}}' style="width:{{imgwidth}}px;"></image>
       <view class='desc'>{{desc.desccon}}</view>
       <view class='action'>
         <button bindtap='share' class='actionbtn' open-type='share'>分享出去</button>

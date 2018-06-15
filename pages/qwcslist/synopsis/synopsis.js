@@ -43,6 +43,8 @@ Page({
     
     utils.getData(url,params,function(res){
 
+      
+
       that.setData({
         desc:res.data.desc[0],
         contents:res.data.contents,
