@@ -17,7 +17,6 @@ Page({
    */
   onLoad: function (options) {
     
-    
     var width = wx.getSystemInfoSync().windowWidth-40
     this.setData({
       titleid:options.titleid,
@@ -51,10 +50,21 @@ Page({
       })
     })
   },
+
+  /**
+   * 动态判断
+   */
   share:function(){
-    
+   
+    var citype = this.data.citype
+    if(citype == 1){
+      wx.redirectTo({
+        url: '/pages/qwcslist/qwcslist',
+      })
+    }
   },
   start:function(){
+  
     var titleid = this.data.titleid
     var myurl = getApp().globalData.qwcsurl + "index/starttest?question_title=" + titleid
     var params = []
@@ -106,7 +116,7 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    var titleid = this.data.titleid
+    
     var url = '/pages/qwcslist/qwcslist'
     return {
       title: '发现一个好玩的性格测试，快来试一试！',

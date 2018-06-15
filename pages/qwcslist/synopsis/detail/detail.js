@@ -163,11 +163,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    var titleid = this.data.titleid
-    var mypath = '/pages/qwcslist/qwcslist'
+    
+    var url = '/pages/qwcslist/qwcslist' 
     return {
-      title: '我做了这个性格测试，你也来试一试吧！',
-      path: mypath
+      title: '发现一个好玩的性格测试，快来试一试！',
+      path: url
     }
   }
 })
