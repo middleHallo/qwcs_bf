@@ -21,7 +21,7 @@ Page({
   
   //定义滑块改变的事件处理函数，将current赋值给selectedTitle
   bindChange: function (e) {
-    console.log(e.detail.current)
+    
     var i = e.detail.current
     var contents = this.data.contents
     this.setData({
@@ -69,7 +69,7 @@ Page({
  // 当选择了某一个答案之后得到的相应的携带的value，并将其传给setcurrentitem
   radiovaluechange:function(event){
     var nextid = event.currentTarget.dataset.nextid
-    console.log(nextid)
+    
     this.setcurrentitem(nextid)
   },
 

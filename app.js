@@ -35,6 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    qwcsurl: 'http://192.168.1.110/xzw/public/qwcs/'
+    qwcsurl: 'https://xcxa.guokehuyu.com/qwcs/'
   }
 })
