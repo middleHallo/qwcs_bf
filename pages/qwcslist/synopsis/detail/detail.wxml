@@ -19,7 +19,7 @@
         <view class='page' style='height:{{swiperHeight}}px;' hidden='{{currentQA.question.isquestion==1?true:false}}' >
             <view class='result'>
               <view>
-                <image mode='widthFix' src='/images/cell1.jpg' style="width:{{imgwidth}}px;"></image>
+                <image mode='widthFix' src='{{desc.imgurl}}' style="width:{{imgwidth}}px;"></image>
               </view>
               <view>
                 <open-data type="userAvatarUrl" class="useravatar"></open-data>

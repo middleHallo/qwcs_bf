@@ -42,9 +42,7 @@ Page({
     var params = []
     
     utils.getData(url,params,function(res){
-
       
-
       that.setData({
         desc:res.data.desc[0],
         contents:res.data.contents,
@@ -58,12 +56,7 @@ Page({
    */
   share:function(){
    
-    var citype = this.data.citype
-    if(citype == 1){
-      wx.redirectTo({
-        url: '/pages/qwcslist/qwcslist',
-      })
-    }
+    
   },
   start:function(){
   
@@ -78,8 +71,11 @@ Page({
 
     var contents = this.data.contents
     var finalresult = this.data.finalresult
+    var desc = this.data.desc
+    
     wx.setStorageSync('contents', contents)
     wx.setStorageSync('finalresult', finalresult)
+    wx.setStorageSync('testdesc', desc)
     
     var myurl = 'detail/detail?titleid=' + titleid
     wx.navigateTo({

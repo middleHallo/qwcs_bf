@@ -14,7 +14,7 @@ Page({
     imgwidth:320,
     contents:[],
     finalresult:[],
-    
+    desc:[],
     // 当前的选项（包括问题和其答案）
     currentQA:[]
   },
@@ -58,11 +58,13 @@ Page({
   onShow: function () {
     var contents = wx.getStorageSync('contents')
     var finalresult = wx.getStorageSync('finalresult')
+    var desc = wx.getStorageSync('testdesc')
 
     this.setData({
       contents: contents,
       finalresult: finalresult,
-      currentQA: contents[0]
+      currentQA: contents[0],
+      desc: desc
     })
   },
 
@@ -94,23 +96,15 @@ Page({
 
       var result = this.data.finalresult
 
-      console.log(result)
+      
       for (let j = 0; j < result.length;j++){
 
         if (nextid == result[j].qwcs_question_id){
           
-          // console.log("进来了，j=" + j)
-          // var array = new Array()
-          // array['question'] = result[j];
-
-          // console.log(result[j])
-
-          // array['anwser'] = []
           this.setData({
             currentQA: result[j]
           })
 
-          // console.log("array=" + array)
         }
       }
     }
@@ -135,7 +129,9 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    wx.clearStorageSync('contents')
+    wx.clearStorageSync('finalresult')
+    wx.clearStorageSync('testdesc')
   },
 
   /**
