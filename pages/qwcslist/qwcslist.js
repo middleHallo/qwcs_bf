@@ -28,11 +28,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    utils.myshowloading('玩命加载中...')
     var that = this
     var url = getApp().globalData.qwcsurl + "index/getlist"
     var params = []
     var result = utils.getData(url,params,function(res){
-        
+        wx.hideLoading()
         that.setData({
           qwcslist:res.data.content,
         })

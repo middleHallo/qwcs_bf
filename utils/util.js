@@ -47,6 +47,12 @@ function myshowmodel(title, content) {
   })
 }
 
+function myshowloading(title){
+  wx.showLoading({
+    title: title,
+  })
+}
+
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -56,5 +62,6 @@ module.exports = {
   formatTime: formatTime,
   convertToStarsArray: convertToStarsArray,
   getData: getData,
-  myshowmodel: myshowmodel
+  myshowmodel: myshowmodel,
+  myshowloading: myshowloading
 }

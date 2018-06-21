@@ -35,7 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    qwcsurl: 'https://xcxa.guokehuyu.com/qwcs/'
-    //qwcsurl: 'http://localhost/qwcs/'
+    //qwcsurl: 'https://xcxa.guokehuyu.com/qwcs/'
+    qwcsurl: 'http://localhost/qwcs/'
   }
 })
